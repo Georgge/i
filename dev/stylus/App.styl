@@ -1,0 +1,88 @@
+$abundant = #f1f1f1
+$mobilePadding = 15px
+$topPadding = 50px
+
+*
+  margin: 0
+  padding: 0
+
+body
+  font-family: 'Open sans', sans-serif
+
+@font-face
+  font-family: 'Anodina'
+  src: url('./assets/Anodina-Bold.otf')
+
+
+.App
+  background-color: $abundant
+  height: 100vh
+  width: 100vw
+  display: flex
+  padding: 0px 20px 0px 20px
+  box-sizing: border-box
+  font-size: 16px
+
+.top-bar
+  position: fixed
+  height: 50px
+  display: flex
+  align-items: center
+  top: 0
+  left: 20px
+  right: 20px
+  justify-content: space-between
+  background-color: $abundant
+
+  &-menu
+    padding-top: ($mobilePadding - 12)
+    >i
+      font-size: 1.4em
+
+  &-title
+    font-size: 1.3em
+    font-family: 'Anodina'
+    &:before
+      content: '<'
+      font-size: 1.2em
+      position: relative
+      top: -1px
+
+.scroll
+  position: fixed
+  right: 0
+  top: 83vh
+  padding: 0.1px
+
+  &-current
+  &-next
+    transform: rotate(90deg)
+
+  &-current
+  &-line
+  &-next
+    display: none
+
+  &-line
+    height: 45vh
+    border-left: 1px solid #000000
+    padding: 0.1px
+    margin-top: 20px
+    margin-bottom: 20px
+    margin-left: 21px
+
+  >i
+    font-size: 2em
+    margin-right: 14px
+    font-style: normal
+
+.hero
+  &-text
+    width: 75%
+
+
+.screen
+  width: 100%
+  height: 100vh
+  padding-top: $topPadding
+  box-sizing: border-box
