@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "title": "React",
+      "ptn": 2.5,
+      "icon": "fab fa-react"
+    },
+    {
+      "title": "React Native",
+      "ptn": 2,
+      "icon": "fab fa-react"
+    },
+    {
+      "title": "NodeJS",
+      "ptn": 3,
+      "icon": "fab fa-node-js"
+    },
+    {
+      "title": "Python and Django",
+      "ptn": 3,
+      "icon": "fab fa-python"
+    },
+    {
+      "title": "Web Design",
+      "ptn": 2,
+      "icon": "fab fa-adobe"
+    },
+    {
+      "title": "❤ to learn",
+      "ptn": 5,
+      "icon": "fas fa-glasses"
+    }
+  ]
+}

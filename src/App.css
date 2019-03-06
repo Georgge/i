@@ -10,13 +10,15 @@ body {
   src: url("./assets/Anodina-Bold.otf");
 }
 .App {
-  background-color: #f1f1f1;
-  height: 100vh;
+  background-color: #f8f8f8;
+  height: auto;
+  min-height: 100vh;
   width: 100vw;
   display: flex;
   padding: 0px 20px 0px 20px;
   box-sizing: border-box;
   font-size: 16px;
+  flex-wrap: wrap;
 }
 .top-bar {
   position: fixed;
@@ -27,7 +29,8 @@ body {
   left: 20px;
   right: 20px;
   justify-content: space-between;
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
+  z-index: 100;
 }
 .top-bar-menu {
   padding-top: 3px;
@@ -72,13 +75,161 @@ body {
   font-size: 2em;
   margin-right: 14px;
   font-style: normal;
+  color: #4841c0;
 }
 .hero-text {
-  width: 75%;
+  margin-top: 0.65em;
+  width: 94%;
+}
+.skill-item-container {
+  display: flex;
+  align-items: center;
+}
+.skill-item-container >i {
+  font-size: 2.8em;
+  margin-right: 10px;
+  color: #2e3131;
+}
+.skill-item-info {
+  font-size: 1.1em;
+  color: #2e3131;
+  position: relative;
+  top: -3px;
+}
+.skill-item-info >div:first-child {
+  margin-bottom: 3px;
 }
 .screen {
   width: 100%;
   height: 100vh;
   padding-top: 50px;
   box-sizing: border-box;
+  position: relative;
+  font-family: 'Open sans';
+}
+.par,
+.subtitle,
+.skill-item {
+  margin-bottom: 1.31em;
+  line-height: 1.3em;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  position: relative;
+}
+.par-dots,
+.subtitle-dots,
+.skill-item-dots,
+.par-dots2,
+.subtitle-dots2,
+.skill-item-dots2 {
+  line-height: 1.3em;
+  width: 25px;
+  min-width: 25px;
+  margin-right: 5px;
+  position: relative;
+  top: 0;
+  bottom: 0;
+  overflow-y: hidden;
+}
+.par-dots:before,
+.subtitle-dots:before,
+.skill-item-dots:before,
+.par-dots2:before,
+.subtitle-dots2:before,
+.skill-item-dots2:before {
+  color: #e4e4e4;
+  content: '● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ● ●';
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+.par-dots2,
+.subtitle-dots2,
+.skill-item-dots2 {
+  width: 54px;
+  min-width: 54px;
+}
+.subtitle-text {
+  font-size: 1.3em;
+  font-family: 'Anodina';
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.subtitle-text:before {
+  content: '<';
+  font-size: 1.2em;
+  position: relative;
+  top: -1px;
+}
+.close {
+  margin-bottom: 1.31em;
+  line-height: 1.3em;
+  display: flex;
+  position: absolute;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  bottom: 0;
+  left: 0;
+}
+.close-tag {
+  font-size: 1.3em;
+  font-family: 'Anodina';
+}
+.close-tag:after {
+  content: '>';
+  font-size: 1.2em;
+  position: relative;
+}
+.subtitle-dots {
+  line-height: 1.5em;
+}
+.puntuation {
+  display: flex;
+  justify-content: flex-start;
+}
+.ptn-true {
+  position: relative;
+}
+.ptn-true >span:last-child {
+  display: none;
+}
+.ptn-true >span:first-child {
+  width: 0.8em;
+  height: 0.8em;
+  border-top-right-radius: 1.6em;
+  border-bottom-right-radius: 1.6em;
+  background-color: #f8f8f8;
+  border: 2px solid #2e3131;
+  box-sizing: border-box;
+}
+.ptn-true .half:last-child {
+  display: inline-block;
+  position: absolute;
+  top: 2.5px;
+  right: 0;
+  z-index: 2;
+}
+.puntuation-circle {
+  width: 0.8em;
+  height: 0.8em;
+  margin-right: 0.5em;
+}
+.puntuation-circle:last-child {
+  margin-right: 0;
+}
+.puntuation-circle >span {
+  display: inline-block;
+  width: 0.4em;
+  height: 0.8em;
+  background-color: #2e3131;
+}
+.puntuation-circle >span:first-child {
+  border-top-left-radius: 1.6em;
+  border-bottom-left-radius: 1.6em;
+}
+.puntuation-circle >span:last-child {
+  border-top-right-radius: 1.6em;
+  border-bottom-right-radius: 1.6em;
 }
