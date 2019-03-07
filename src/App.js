@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Home } from './components/Home';
 import { Skills } from './components/Skills';
+import { Contact } from './components/Contact';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
 
         <Home />
         <Skills />
+        <Contact />
       </div>
     );
   }
