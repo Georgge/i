@@ -3,7 +3,7 @@ import { skills } from '../hard/skills.json';
 
 
 export const Skills = () => (
-  <div className="screen">
+  <div className="screen  skills">
     <div className="subtitle">
       <h2 className="subtitle-text">Skills</h2>
       <div className="subtitle-dots" />
@@ -47,14 +47,14 @@ export const Skills = () => (
                 </div>
               </div>
             </div>
-            <div className="skill-item-dots2" />
+            <span className="skill-item-dots2" />
           </div>
         );
       })
     }
     <div className="close">
       <h2 className="close-tag">/</h2>
-      <div className="subtitle-dots" />
+      <span className="subtitle-dots" />
     </div>
   </div>
 );

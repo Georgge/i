@@ -1,31 +1,60 @@
 import React, { Component } from 'react';
+import Hammer from 'react-hammerjs';
+import { TweenLite } from 'gsap';
+import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
 
 
 import './App.css';
+import { Statics } from './components/Statics';
 import { Home } from './components/Home';
 import { Skills } from './components/Skills';
 import { Contact } from './components/Contact';
 
 class App extends Component {
+  state = {
+    screens: [
+      '.home',
+      '.skills',
+      '.contact',
+    ],
+    currentScreen: 0,
+  }
+
+  _handleSwipe = (e) => {
+    const { angle, isFinal } = e;
+    const direction = angle < 0 ? 'up' : 'down'
+    const { screens, currentScreen } = this.state;
+    let current = currentScreen
+
+    console.log(direction, isFinal);
+
+    if (direction === 'up' && isFinal && current < screens.length - 1){
+      current += 1;
+      this.setState({ currentScreen: current }, () => {
+        console.log(screens[currentScreen]);
+        TweenLite.to(window, 0.5, {scrollTo: screens[current]});
+      })
+    }
+    else if (direction === 'down' && isFinal && current > 0) {
+      current -= 1;
+      this.setState({ currentScreen: current }, () => {
+        console.log(screens[currentScreen]);
+        TweenLite.to(window, 0.5, {scrollTo: screens[current]});
+      })
+    }
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="top-bar">
-          <h1 className="top-bar-title">JorgeGarcia</h1>
-          <div className="top-bar-menu">
-            <i className="fas fa-bars" />
+        <Hammer onSwipe={this._handleSwipe} direction="DIRECTION_VERTICAL">
+          <div className="touchable-area">
+            <Statics state={this.state} />
+            <Home />
+            <Skills />
+            <Contact />
           </div>
-        </header>
-        <div className="scroll">
-          <div className="scroll-current">Home</div>
-          <div className="scroll-line" />
-          <div className="scroll-next">02</div>
-          <i>↓</i>
-        </div>
-
-        <Home />
-        <Skills />
-        <Contact />
+        </Hammer>
       </div>
     );
   }

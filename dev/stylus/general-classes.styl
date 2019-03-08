@@ -8,13 +8,14 @@
   position: relative
   font-family: 'Open sans'
 
-  &.invert
-    background-color: $secondaryColor
-    color: $abundant
+.invert
+  background-color: $secondaryColor
+  color: $abundant
 
 .par
 .subtitle
 .skill-item
+.contact-item
   margin-bottom: 1.31em
   line-height: 1.3em
   display: flex
@@ -23,6 +24,7 @@
   position: relative
   &-dots
   &-dots2
+  &-dots3
     line-height: 1.3em
     width: 25px
     min-width: 25px
@@ -41,6 +43,9 @@
   &-dots2
     width: 54px
     min-width: 54px
+  &-dots3
+    width: 82px
+    min-width: 82px
 
 .subtitle-text
   font-size: 1.3em
@@ -122,3 +127,24 @@
     &:last-child
       border-top-right-radius: (0.8em * 2)
       border-bottom-right-radius: (0.8em * 2)
+
+.input-container
+  display: flex
+  align-items: flex-start
+  >label
+    outline: 2px solid rgba(255, 255, 255, 0)
+    margin-right: $space
+    margin-top: ($space - 10)
+  >input
+  >textarea
+    min-width: 180px
+    padding: ($space - 10)
+    &:focus
+      outline: 2px solid $highlightColor
+  >textarea
+    height: 160px
+
+.jc-start
+  justify-content: flex-start!important
+.jc-end
+  justify-content: flex-end!important
