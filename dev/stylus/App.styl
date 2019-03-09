@@ -1,9 +1,12 @@
+@import 'Mixins'
+
 $abundant = #f8f8f8
 $secondaryColor = #2e3131
 $highlightColor = #4841c0
 $attenuatorColor = #e4e4e4
 $space = 15px
 $topPadding = 50px
+$lateralPadding = 20px
 
 *
   margin: 0
@@ -42,6 +45,10 @@ body
   justify-content: space-between
   background-color: $abundant
   z-index: 100
+
+  {device-size(tablet-portrait-up)}
+    padding-right: ($lateralPadding * 2) 
+    padding-left: ($lateralPadding * 2)
 
   &-menu
     padding-top: ($space - 12)

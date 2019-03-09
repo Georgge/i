@@ -35,6 +35,10 @@ body {
   background-color: #f8f8f8;
   z-index: 100;
 }
+.top-bar {
+  padding-right: 40px;
+  padding-left: 40px;
+}
 .top-bar-menu {
   padding-top: 3px;
 }
@@ -139,6 +143,10 @@ body {
   box-sizing: border-box;
   position: relative;
   font-family: 'Open sans';
+}
+.screen {
+  padding-right: 40px;
+  padding-left: 40px;
 }
 .invert {
   background-color: #2e3131;
